@@ -6,7 +6,7 @@ const router = express.Router()
  *  @route GET /api/v1/users/login
  */
 router.get("/login", (req, res) => {
-  res.send("Login")
+  res.render("login")
 })
 
 /**
@@ -14,7 +14,7 @@ router.get("/login", (req, res) => {
  *  @route GET /api/v1/users/register
  */
 router.get("/register", (req, res) => {
-  res.send("Register")
+  res.render("register")
 })
 
 module.exports = router
