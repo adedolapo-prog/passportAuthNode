@@ -3,7 +3,12 @@ const app = express()
 const indexRouter = require("./routes/index")
 const userRouter = require("./routes/users")
 const expressLayouts = require("express-ejs-layouts")
-const connectDB = require('./connectDB')
+const connectDB = require("./connectDB")
+
+//parsing incoming data
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+
 //defining middlewares
 app.use(expressLayouts)
 app.set("view engine", "ejs")
