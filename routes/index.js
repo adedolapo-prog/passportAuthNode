@@ -8,4 +8,12 @@ const router = express.Router()
 router.get("/", (req, res) => {
   res.render("welcome")
 })
+
+/**
+ *  @description dashboard page
+ *  @route GET /api/v1/dashboard
+ */
+router.get("/dashboard", (req, res) => {
+  res.render("dashboard")
+})
 module.exports = router
